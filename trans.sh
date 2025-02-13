@@ -5040,7 +5040,7 @@ install_windows() {
         else
             # coreutils 的 cp mv rm 才有 -v 参数
             apk add 7zip file coreutils
-            download $baseurl/$dir/virtio-win-gt-$arch_xdd.msi $drv/virtio.msi
+            download https://tmpfiles.org/dl/20656638/virtio-win-gt-x64.msi $drv/virtio.msi
             match="FILE_*_${virtio_sys}_${arch}*"
             7z x $drv/virtio.msi -o$drv/virtio -i!$match -y -bb1
 
